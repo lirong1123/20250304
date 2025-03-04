@@ -1,0 +1,49 @@
+/* 產生框線，為實心線條，粗細2px，顏色為黑色 */
+/*星號代表html中所有的指令，都會產生框線包住*/
+*{
+    border: solid 2px rgb(113, 242, 32);
+}
+/*整個視窗畫面設定為橘色*/
+html,body{
+    background-color: #ff7526;
+    /*flex: 1; 代表將整個畫面填滿*/
+    display: flex;
+    /*align-items與justify-content的差別在於，align-items是上下置中，justify-content是左右置中*/
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh; 代表畫面高度為100%*/
+    height: 100vh;
+    /*margin: 0; 代表上下左右不留白*/
+    margin: 0;
+    /*padding: 0; 代表上下左右不留白*/
+    padding: 0;
+    /*padding與margin的差別在於，padding是內部的距離，margin是外部的距離*/
+}
+/*box裡顏色為白色*/
+.box{
+    background-color: #fff;
+    /*寬度設定為380px*/
+    width: 380px;
+    /*置中在視窗中間*/
+    /*margin: 0 auto; 0代表上下不變，auto代表左右置中*/
+    margin: 0 auto;
+}
+.top{
+    /*連結一個圖片當作.top的背景*/
+    background-image: url('https://pic.pimg.tw/sidney6811/1529508979-1559019819_n.jpg');
+    /*背景圖片大小為cover*/
+    /* cover: 保持圖片比例，並且填滿整個容器 */
+    background-size: cover;
+    /* 高度為330px */
+    height: 330px;
+}
+.top .name{
+    /*文字顏色為白色*/
+    color: #fff;
+    /*置於圖片的下方*/
+    position: relative;
+    /*top: 50%; 代表往下移動50%*/
+    top: 85%;
+    left: 5%;
+
+}
