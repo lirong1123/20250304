@@ -1,49 +1,122 @@
-/* 產生框線，為實心線條，粗細2px，顏色為黑色 */
-/*星號代表html中所有的指令，都會產生框線包住*/
+/* *代表在index.html內的所有指令<>，都會產生一個框線框起來 */
 *{
-    border: solid 2px rgb(113, 242, 32);
+    /* 產生框線，為實心線條，粗細2px，黑色 */
+     border: solid 2px yellow;  
 }
-/*整個視窗畫面設定為橘色*/
+/* 整個視窗畫面設定 */
 html,body{
-    background-color: #ff7526;
-    /*flex: 1; 代表將整個畫面填滿*/
+    /* 設定背景顏色為淺灰色 */
+    background-color: #ff7526; 
+    /* 設定視窗的高度為100% */
+    height: 100%;
+    /* 設定視窗的寬度為100% */
+    width: 100%;
+    /* 把.box置於視窗的上下左右的中間 */
     display: flex;
-    /*align-items與justify-content的差別在於，align-items是上下置中，justify-content是左右置中*/
     justify-content: center;
     align-items: center;
-    /*height: 100vh; 代表畫面高度為100%*/
-    height: 100vh;
-    /*margin: 0; 代表上下左右不留白*/
-    margin: 0;
-    /*padding: 0; 代表上下左右不留白*/
-    padding: 0;
-    /*padding與margin的差別在於，padding是內部的距離，margin是外部的距離*/
 }
-/*box裡顏色為白色*/
+/*  */
 .box{
     background-color: #fff;
-    /*寬度設定為380px*/
+    /* 設定寬度為380px，且置中在視窗中間 */
     width: 380px;
-    /*置中在視窗中間*/
-    /*margin: 0 auto; 0代表上下不變，auto代表左右置中*/
-    margin: 0 auto;
+    /* margin: 0 auto;     */
+    box-shadow: 10px 10px 10px #000;
+}
+.box:hover{
+    /* 往左上角移動 */
+    transform: translate(-3px, -3px);
 }
 .top{
-    /*連結一個圖片當作.top的背景*/
-    background-image: url('https://pic.pimg.tw/sidney6811/1529508979-1559019819_n.jpg');
-    /*背景圖片大小為cover*/
-    /* cover: 保持圖片比例，並且填滿整個容器 */
-    background-size: cover;
-    /* 高度為330px */
+    /* 連結一個網頁的圖片當作.top的背景圖片 */
+    background-image: url(https://pic.pimg.tw/sidney6811/1529508979-1559019819_n.jpg) ;
+    /* .top的高設定為330px，背景圖要充滿整個.top內 */
     height: 330px;
-}
-.top .name{
-    /*文字顏色為白色*/
-    color: #fff;
-    /*置於圖片的下方*/
+    background-size: cover;
+    /* 把h2的文字置於.top的下方，且文字靠左*/    
+    display: flex;    
+    align-items: flex-end;
     position: relative;
-    /*top: 50%; 代表往下移動50%*/
-    top: 85%;
-    left: 5%;
+}
+.bottom{
+    position: relative;
+}
 
+.top h2{
+    /* 設定文字顏色為白色 */
+    color: #fff;   
+     /* 距離下方的外距為10px，距離左方的外距為10px  */
+    margin-bottom: 1px; 
+    /*margin-left: 10px;*/
+    /* letter-spacing是字元間的距離，1px代表字元間的距離為1px */
+    letter-spacing: 1px;
+    width: 100%;
+    /* 背景顏色為黑色，由下而上漸層，下較黑，透明度0.9 */
+    /* linear-gradient 是一個線性漸層的函式，to top代表由下而上，#000代表黑色，transparent代表透明度為0.9 */
+    background: linear-gradient(to top, #000, transparent 90%);
+}
+.smallText{
+    font-size: 14px;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    /* 設定圓形的圓角為50% */
+    border-radius: 50%;
+    /* 設定圓形的背景顏色為橘色 */
+    background-color: #ff7526;
+    position: absolute;
+    /* 距離上方的外距為-20px，距離左方的外距為-20px */
+    right: 30px;
+    bottom: -20px;
+}
+.rectangle{
+    width: 25px;
+    height: 50px;
+    background-color: #ff7526;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+ul{
+    list-style-type: none;
+    padding: 5px;
+    margin-left: 5px;
+    line-height: 30px; 
+}
+.btn{
+    width: 80px;
+    height: 30px;
+    /* text-align 為文字置中 */
+    text-align: center;
+    /* 文字上下置中 */
+    line-height: 30px;
+    /* 設定按鈕的圓角為10px */
+    border-radius: 10px;
+    /* 黑色邊框 */
+    border: solid 1px #000;
+}
+.btnwebsite{
+    /* 設定按鈕的背景顏色為橘色 */
+    background-color: #ff7526;
+    /* 文字顏色為白色 */
+    color: #fff;
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+}
+.btnwebsite:hover{
+    /* 按鈕背景顏色變為橘色 */
+    background-color: #dd6723;
+    /* 文字顏色變為白色 */
+    color: #e6e6e6;
+}
+.btnnews{
+    margin-left: 110px;
+    padding: 7px;
+}
+.btnnews:hover{
+    background-color: #c6c6c6;
+    color: #000000;
 }
